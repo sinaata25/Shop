@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Shop</string>
     <string name="app_name_persian">سه سوت شاپ</string>
+    <string name="newest">محصولات جدید</string>
+    <string name="special_sell">فروش ویژه</string>
+    <string name="mizbane_sedaye_shoma">میزبان صدای گرمتان هستیم</string>
+    <string name="number_call">+98939****122</string>
+    <string name="whatsapp_number">+98939****123</string>
+    <string name="email_call">sesootshop@gmail.com</string>
+    <string name="zemanat">ضمانت بازگشت کالا</string>
+    <string name="poshtibani">خدمات پس از فروش</string>
+    <string name="esalat">ضمانت اصالت</string>
+    <string name="tahvil">تحویل سریع</string>
+
 </resources>

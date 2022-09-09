@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Android/Shop/app/src/main/res/drawable/style.xml" value="0.1765" />
         <entry key="..\:/Android/Shop/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Shop/app/src/main/res/layout/categories.xml" value="0.2" />
         <entry key="..\:/Android/Shop/app/src/main/res/layout/categories_home_fragment.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/Shop/app/src/main/res/layout/home_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Shop/app/src/main/res/layout/categories_home_fragment_item.xml" value="0.33" />
+        <entry key="..\:/Android/Shop/app/src/main/res/layout/home_fragment.xml" value="0.22" />
         <entry key="..\:/Android/Shop/app/src/main/res/layout/intro_activity.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Shop/app/src/main/res/layout/item_recycler_image_priview.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Shop/app/src/main/res/layout/profile_fragment.xml" value="0.20416666666666666" />

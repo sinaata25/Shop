@@ -11,13 +11,29 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.smarteist.autoimageslider.SliderView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.security.Key;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import myapp.co.shop.IntroInterface;
 import myapp.co.shop.R;
 import myapp.co.shop.adapters.SliderAdapter;
+import myapp.co.shop.data.Keys;
+import myapp.co.shop.data.Urls;
 import myapp.co.shop.model.SliderData;
 
 
@@ -33,8 +49,13 @@ public class Home extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        view=inflater.inflate(R.layout.home_fragment,container,false);
         setUpViews();
-        setUpImageSlider();
+        sets();
+        serverRequest();
         return view;
+    }
+
+    private void sets(){
+        setUpImageSlider();
     }
 
    public void setUpImageSlider() {
@@ -53,6 +74,45 @@ public class Home extends Fragment {
     private void setUpViews() {
          sliderView = view.findViewById(R.id.slider);
     }
+
+   void serverRequest(){
+       StringRequest stringRequest=new StringRequest(Request.Method.POST, Urls.urlGetImageSilder, new Response.Listener<String>() {
+           @Override
+           public void onResponse(String response) {
+               try {
+                   JSONArray jsonArray=new JSONArray(response);
+                   System.out.println(jsonArray);
+               } catch (JSONException e) {
+                   e.printStackTrace();
+               }
+
+           }
+       }, new Response.ErrorListener() {
+           @Override
+           public void onErrorResponse(VolleyError error) {
+            error.printStackTrace();
+           }
+       }){
+           @Override
+           protected Map<String, String> getParams() throws AuthFailureError {
+               Map<String,String> param;
+               param = new HashMap<>();
+                 param.put("key", Keys.key_home_image_priview);
+               return param;
+           }
+       };
+
+
+       RequestQueue requestQueue= Volley.newRequestQueue(getContext());
+       stringRequest.setRetryPolicy(new DefaultRetryPolicy());
+       requestQueue.add(stringRequest);
+
+   }
+
+
+
+
+
 
 
 }
