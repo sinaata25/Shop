@@ -54,18 +54,16 @@
                 app:sliderScrollTimeInSec="1" />
 
 
-
-
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
                 android:id="@+id/recycler_home_categories"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_height="150dp"/>
+                android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="10dp"
                 android:fontFamily="@font/bnazanin"
                 android:textSize="25dp"
@@ -80,7 +78,7 @@
                 android:id="@+id/recycler_home_new_clothes"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                android:layout_height="180dp"/>
+                android:layout_height="235dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -99,7 +97,7 @@
                 android:id="@+id/recycler_home_special_sell"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                android:layout_height="180dp"/>
+                android:layout_height="235dp"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
